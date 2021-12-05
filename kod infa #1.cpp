@@ -49,7 +49,7 @@ string odszyfrowanie(string text) {
     for (int i = 1; i < 27; i++) {
         cout << "Klucz: " << i << " tekst: " << szyfr_cezara(text, i) << endl;
     }
-    return 0;
+	return "koniec";
 }
 
 int main()
@@ -61,7 +61,7 @@ int main()
     cout << "Podaj ciąg znaków: ";
     getline(cin, ciag);
 
-    cout << "\n\nWybierz algorytm sortujący:";
+    cout << "\nWybierz algorytm sortujący:";
     cout << "\n1. Szyfr cezara ";
     cout << "\n2. Szyfr przestawieniowy";
     cout << "\n3. Oba szyfry";
