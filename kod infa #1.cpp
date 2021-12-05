@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string Szyfr_cezara(string text, int klucz = 0) {
+string szyfr_cezara(string text, int klucz = 0) {
 	if (klucz == 0) {
 		cout << "Podaj klucz szyfrowania od 1 do 26: \n";
 		cin >> klucz;
@@ -28,7 +28,7 @@ string Szyfr_cezara(string text, int klucz = 0) {
 	return output;
 }
 
-string Szyfr_przestawieniowy(string text) {
+string szyfr_przestawieniowy(string text) {
 
     int dlugosc = text.length();
     if (dlugosc % 2 != 0) dlugosc -= 1;
@@ -42,12 +42,12 @@ string Szyfr_przestawieniowy(string text) {
 }
 
 string oba(string text) {
-	return Szyfr_cezara(Szyfr_przestawieniowy(text));
+	return szyfr_cezara(szyfr_przestawieniowy(text));
 }
 
 string odszyfrowanie(string text) {
     for (int i = 1; i < 27; i++) {
-        cout << "Zmiana: " << i << " tekst: " << Szyfr_cezara(text, i) << endl;
+        cout << "Zmiana: " << i << " tekst: " << szyfr_cezara(text, i) << endl;
     }
     return 0;
 }
@@ -71,10 +71,10 @@ int main()
 	switch (wybor)
 	{
 	case '1':
-		cout << Szyfr_cezara(ciag) << endl;
+		cout << szyfr_cezara(ciag) << endl;
 		break;
 	case '2':
-		cout << Szyfr_przestawieniowy(ciag) << endl;
+		cout << szyfr_przestawieniowy(ciag) << endl;
 		break;
 	case '3':
 		cout << oba(ciag) << endl;
