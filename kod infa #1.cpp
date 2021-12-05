@@ -47,7 +47,7 @@ string oba(string text) {
 
 string odszyfrowanie(string text) {
     for (int i = 1; i < 27; i++) {
-        cout << "Zmiana: " << i << " tekst: " << szyfr_cezara(text, i) << endl;
+        cout << "Klucz: " << i << " tekst: " << szyfr_cezara(text, i) << endl;
     }
     return 0;
 }
